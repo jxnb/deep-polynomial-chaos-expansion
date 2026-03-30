@@ -1,0 +1,31 @@
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12"]
+build-backend = "uv_build"
+
+[project]
+name = "deep-polynomial-chaos-expansion"
+version = "0.1.0"
+description = "Code for the paper: Johannes Exenberger, Sascha Ranftl, Robert Peharz. Deep Polynomial Chaos Expansion. AISTATS 2026."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "h5py>=3.16.0",
+    "matplotlib>=3.10.8",
+    "numpy>=2.3.5",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.13.1",
+    "scikit-learn>=1.8.0",
+    "tensorchaos @ git+ssh://git@github.com/jxnb/tensorchaos.git@v0.1.0",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
+    "tqdm>=4.66.5",
+]
+
+authors = [
+    {name = "Johannes Exenberger"}
+]
+
+[tool.uv.build-backend]
+module-name = "src"
+module-root = ""
+
